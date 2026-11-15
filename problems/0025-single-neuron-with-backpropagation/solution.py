@@ -19,7 +19,6 @@ def train_neuron(features: np.ndarray, labels: np.ndarray, initial_weights: np.n
 
         # 3. delta_k = 2 (ŷ - y) ŷ (1 - ŷ)
         delta = 2 * (y_hat - labels) * y_hat * (1 - y_hat)
-        print(delta)
         # 4. gradients moyennés sur le batch
         grad_w = features.T @ delta / N
         grad_b = np.mean(delta)
